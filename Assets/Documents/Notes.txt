@@ -1,0 +1,90 @@
+
+Main Camera
+    -Position it where you want (if you have terrain on a terrain)
+    -Understand orientation better. For now its orthographic because its a 2d game, no need for perspective
+    -Put script CameraController.cs. It does the basics of allowing to pan camera over a map. You can
+        also set limits to panning distance - borders lets call it.
+        
+        
+Canvas
+    -Graphics Raycaster - Raycaster for UI basically
+    -Have separate UI camera
+    -Downwards in hierarchy is going over top
+        
+Features:
+    Manager:
+        -All managers initialization order from one, main one (GameplayManager)
+    Camera:
+        -Pan and zoom in zoom out. Not working correctly, because z should go from -10 to -40 for example
+    Canvas:
+        -Canvas that follows camera. Layers set
+    Input:
+         -Input separating: canvas and world click. Raycasts
+    Menu:
+         -Button for building. Prototype of connection between ui and game/level/gameplay
+    Level:
+         - Empty for now
+        
+        
+        
+TODO:
+Add tasks to clickup or other tools. First define tasks
+
+Project:
+    -Think about:
+        -Building system, structures and other map elements.
+            -Req: be able to change easily dynamic and subclasses of those.
+            -Req: be able to expand in terms of complexity, component number and types (structure is one type)
+            -Should you use patterns? Should you add each one separately? Allow that modification later at least?
+            -Example: Should TestHouse be prefab instance and has its own special script? or there is 
+                a different approach: idea: action and effect system.  
+Camera: 
+    - don't pan when mouse is outside window. limit so it cant go outside if possible, and pan should
+    be at edges of the screen, small margin. Add as options in script for that.
+    - option for reversing zoom in and zoom out.
+
+Idea: Action and effect system. So when you add building you add new action, build that object and thats it.
+
+Learn:
+    -Learn patterns now for structuring
+
+Research topic:
+    -Prefab dynamic model building:
+        -Example: build house with electric heating but other type of furnace. Then another house with
+            different parts
+    -Dynamic model building visually: merging triangles and edges effects? should it be done or not?
+
+Automating ideas:
+    -(for now ideas only, no need for automating yet)
+    -(what about automating developing game process like now? But for now most of the time goes into
+        research)
+    -Auto creating menu items (for building buttons for example) and structures. Also other types.
+
+Code:
+    -Namespaces add. Research how is best to organize
+    -Singleton pattern?
+
+//Possibility of complexity increase are opportunities for structural mistakes.
+//Exponential number of functions. Exponential number of subclasses. Or exponential depth of hierarchy.
+//Those usually sign where pattern errors occur. At least architectural ones.
+--Tip: u play modu prevuces i napravis prefab - trail npr. u play modu mozes i animaciju da menjas? proveri
+-Input? Should be done with raycast or how
+
+Input: keys later. with new unity system
+    Mouse input. Colliders or what? 
+    
+    -Grapghic raycaster
+    -Input system (mouse and keyboard)
+    -Event system (unity and custom)
+    
+    - raycast vs raycasters. Better approach
+    
+    
+    -create strategy game prototype. 
+    
+    
+ -----------------------
+ v0.2 Next patch:
+ -Building of house possibility.
+ -Optimizing code
+ -Maybe better system for structures and map elements.
